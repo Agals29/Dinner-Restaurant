@@ -1,0 +1,893 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fbfbfc;
+  padding: 8px;
+  border-bottom: 2px solid #ccc;
+  border-bottom-left-radius: 100px; /* Add curve to bottom-left */
+  border-bottom-right-radius: 100px; /* Add curve to bottom-right */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   position: sticky;
+}
+.navbar-brand h1 {
+  font-size: 25px;
+  color: #000;
+}
+.navbar-brand span {
+  color: #ff6600;
+}
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap:1px;
+  padding: 10px 110px;
+}
+.nav-links li {
+  position: relative;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #5a5757;
+  font-size: 16px;
+  font-family:sans-serif;
+  line-height: 1.80857;
+  padding: 10px 10px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  padding-left: 21px;
+  font-weight:550;
+  
+}
+.nav-links a:hover {
+  color: white;
+  background: #d65106;
+  border-radius: 5px;
+  padding: 12px;
+}
+img {
+  margin-left: 95px;
+  height: 60px;
+  width: 300px;
+}
+/* Arrow styling */
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px;
+  background-color: #f8f9fa;
+   position: sticky;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar-brand img {
+  width: 145px;
+}
+/* Move the toggle button to the right */
+.navbar-toggler {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #636161;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  background-color:#d65106;
+  color: #fff;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f0ecec;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 3px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  color:#636161;
+  white-space: nowrap;
+  width:130px;
+  padding: 7px;
+}
+
+.dropdown-menu a:hover {
+  background-color:#d65106;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color:  #f8f9fa;
+    position: absolute;
+    top: 107px;
+    left: 0;
+    padding: 15px;
+    border-bottom: 2px solid #ccc;
+  border-bottom-left-radius: 100px; /* Add curve to bottom-left */
+  border-bottom-right-radius: 100px; /* Add curve to bottom-right */
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    box-shadow: none;
+  }
+}
+/* Fullscreen container */
+
+.navbar {
+  position: absolute; /* Position the navbar absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Make sure it is above the carousel */
+  background-color: rgba(255, 255, 255, 0.986); /* Optional: semi-transparent background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for depth */
+}
+
+
+.dropdown {
+  font-size: 17px;
+  color: #636161;
+  font-weight: 600;
+  display: block;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 8px;
+  margin: -7px;
+  /* Adjust padding as needed */
+}
+
+.dropdown a:hover {
+  background-color: #d65106;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Position below the dropdown link */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  list-style-type: none;
+  width: 150px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px); /* Small slide-down effect */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Prevents "shaking" */
+}
+.dropdown-menu li {
+  margin: 0; /* Remove extra margin to avoid shift */
+}
+.dropdown-menu a {
+  padding: 7px;
+  position: relative;
+  display: block;
+
+  color: #636161;
+  text-decoration: none;
+}
+.dropdown-menu a:hover {
+  background-color: #d65106;
+  color: #fff;
+  padding: 8px;
+}
+/* Ensure dropdown arrow does not trigger reflow */
+.dropdown-arrow {
+  .dropdown-menu a:hover {
+  background-color: #d65106;
+  color: #fff;
+  padding: 8px 12px;
+}
+}
+.dropdown:hover {
+  
+  padding: 9px;
+  background-color: #d65106;
+  color: #fff;
+  border-radius: 5px;
+ 
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+  }
+}
+.carousel-container {
+  width: 99.5vw;
+  height: 99vh;
+  overflow: hidden;
+  position: relative;
+  
+}
+.carousel-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  margin: -19px;
+
+  filter: brightness(60%);
+}
+/* Carousel text and button */
+.carousel-caption {
+  position: absolute;
+  bottom: 24%;
+  left: 11%;
+  text-align: left;
+  max-width: 93%;
+  color: #fff;
+}
+.carousel-heading {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.carousel p {
+  font-size: 1.2rem;
+  color: #ddd;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-button {
+  padding: 9px 22px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #d65106;
+  border: none;
+  font-family:Arial, Helvetica, sans-serif;
+  border-radius: 1px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+ 
+  background-color:  #ff4500;
+}
+.carousel-container .carousel-control-prev-icon,
+.carousel-container .carousel-control-next-icon {
+  background-color: #ff4500; /* Set the background color */
+ border-radius: 5px;        /* Make it round */
+  padding: 25px;             /* Add padding for a larger icon */
+  color: #fff;               /* White arrow color */
+  width: 32px;
+  margin: 15px;
+  height: 32px;
+}
+
+.carousel-container .carousel-control-prev,
+.carousel-container .carousel-control-next {
+  width: auto;               /* Prevents the control from covering the entire side */
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .carousel-image {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    margin: 0; /* Ensure the image fills the container */
+  }
+
+  .carousel-caption {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    right: 5%; /* Center-align by adding equal spacing */
+    text-align: center; /* Center-align text */
+    max-width: 90%;
+    color: #fff;
+  }
+
+  .carousel-heading {
+    font-size: 2.5rem; /* Scaled-down font size for smaller screens */
+    line-height: 1.2; /* Reduce line-height for a more compact look */
+  }
+
+  .carousel p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #ddd;
+  }
+
+  .carousel-button {
+    padding: 8px 18px;
+    font-size: 1rem;
+    margin-top: 8px;
+    display: inline-block; /* Inline block to keep it centered */
+  }
+
+  .carousel-container .carousel-control-prev-icon,
+  .carousel-container .carousel-control-next-icon {
+    padding: 15px;
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Ensure prev and next controls don't cover too much area */
+  .carousel-container .carousel-control-prev,
+  .carousel-container .carousel-control-next {
+    width: 10%; /* Reduce width of control area */
+  }
+}
+
+.restaurant-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+ background-image: url(./img/images/about-bg\ change.jpg);
+height: 560px;
+margin-top: 2px 20px;
+  position: relative;
+width:100%;
+  background-size: cover;
+
+}
+
+.content-left {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 20px;
+}
+.content-left h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+}
+.content-right {
+  background-color: #ff6600;
+  height: 500px;
+  width: 10px !important; /* Forces the width */
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.highlight {
+  color: #f57c00; /* Matching orange color */
+}
+
+.sub-heading {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #333;
+}
+
+.description {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.reservation-btn {
+  background-color: #f57c00;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.reservation-btn:hover {
+  background-color: #e06900;
+}
+
+.content-right {
+  position: relative;
+  flex: 1;
+  max-width: 38%;
+  display:flex;
+  justify-content:center;
+  height: 100px;
+ 
+}
+
+.pizza-image {
+  position: absolute;
+  top: -47px;
+  left: -30px;
+  width: 468px;
+ margin:80px 10px 100px;
+ margin-top: 20px;
+  z-index: 1;
+  height: 405px;
+}
+
+.restaurant-image {
+  width: 100%;
+  height: auto;
+  border: 5px solid #f57c00; /* Orange border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 0;
+  
+}
+
+.send-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #f57c00;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .restaurant-section {
+    display: block; /* Stacks content vertically */
+    padding: 20px;
+    height: auto; /* Adjust height to fit content */
+    background-size: cover;
+  }
+
+  .content-left {
+    max-width: 100%; /* Full width on small screens */
+    padding-right: 0;
+    text-align: center; /* Center-align text for better readability */
+  }
+
+  .content-left h1 {
+    font-size: 1.3em; /* Smaller font size for headings */
+    color: #333;
+  }
+
+  .sub-heading {
+    font-size: 0.9em; /* Slightly smaller sub-heading */
+    margin-top: 5px;
+  }
+
+  .description {
+    font-size: 0.7em;
+    color: #666;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .reservation-btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+    margin-top: 7px;
+  }
+
+  .content-right {
+    max-width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    height: auto; /* Adjust height to fit content */
+    background-color: transparent; /* Remove color background on small screens */
+  }
+
+  .pizza-image {
+    position: static; /* Inline positioning for proper flow */
+    width: 350px; /* Adjusted width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    margin:9px 0px 0px 460px; /* Center the image */
+  }
+
+  .restaurant-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-width: 3px; /* Smaller border */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .send-icon {
+    position: static; /* Inline positioning */
+    margin: 20px auto 0;
+    width: 35px; /* Adjusted size for smaller screens */
+    height: 35px;
+  }
+}
+
+
+/* styles.css */
+
+.navbar {
+  /* Your navbar styles */
+}
+
+.navbar-brand img {
+  width: 100px;
+}
+
+.navbar-toggler {
+  /* Your toggler button styles */
+}
+
+.nav-links {
+  /* Your nav links styles */
+}
+
+.nav-links.show {
+  display: block;
+}
+
+.dropdown-menu {
+  /* Dropdown menu styles */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.quote-section {
+  background-image:url(./img/images/qt-bg.jpg);
+  background-size: cover;
+  background-position: center;
+
+margin-bottom: 250px;
+  background-attachment: fixed;
+  padding: 70px 0px;
+  text-align: center;
+  color: white;
+  width:1500px;
+}
+
+.quote p {
+  font-size: 2rem;
+  margin-bottom: 10px;
+ font-family: 'Rubik', sans-serif;
+  line-height: 1em;
+   white-space: pre;
+  font-size: 35px;
+    font-weight: 300;
+    line-height: 44px;
+    color: #e0dbdb;
+}
+
+.quote h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+
+
+@media (max-width: 480px) {
+  .quote-section {
+    padding: 50px 20px; /* Reduce padding for smaller screens */
+    text-align: center;
+  }
+
+  .quote p {
+    font-size: 1.5rem; /* Smaller font size for quote text */
+    line-height: 1.3em;
+    margin-bottom: 15px;
+  }
+
+  .quote h3 {
+    font-size: 1rem;
+  }
+
+  .special-menu-section {
+    padding: 20px 10px;
+  }
+
+  .special-menu-section h2 {
+    font-size: 1.5rem; /* Reduce heading size */
+    margin-bottom: 8px;
+  }
+
+  .special-menu-section p {
+    font-size: 0.9rem; /* Smaller paragraph font */
+    color: #777;
+    margin-bottom: 15px;
+  }
+
+  .contact-btn {
+    margin-left: 0; /* Remove fixed margin */
+    margin-top: 20px; /* Add margin to center-align on a new line */
+    display: inline-block; /* Inline block for centering */
+  }
+}
+/* Basic styling */
+/* Basic styling */
+
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 300px;
+  padding: 0px;
+  background-color: #f8f8f8;
+  position: sticky;
+  top: 0px;
+  margin-left: 30px;
+  margin:20px 0px 0px 150px;
+  
+}
+
+.category-btn {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.category-btn.active, .category-btn:hover {
+  background-color: #ff6600;
+  color: rgb(245, 241, 241);
+  width: 150px;
+
+}
+
+.app {
+  display: flex;
+}
+
+.sidebar {
+  width: 150px;
+  margin-right: 100px;
+}
+
+.content {
+  flex: 1;
+  text-align: center;
+  margin:-80px 20px 0px -90px;
+ 
+  
+}
+
+.heading {
+  font-size: 50px;
+  margin: -90px 20px;
+  padding: 0px;
+color: #000;
+}
+
+.description {
+  font-size: 20px;
+  color: gray;
+  margin: 90px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+ 
+}
+
+.menu-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.menu-image {
+  width: 210; /* Ensures images fit within their containers */
+  height: 190px; /* Adjust the height as necessary */
+  object-fit: cover; /* Ensures images fill the box without distortion */
+  border-radius: 6px;
+  margin: 10px -90px;
+  margin-right: 0px;
+  transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.menu-item:hover .menu-image {
+  filter: brightness(0.85); /* Darkens the image slightly on hover */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow on hover */
+}
+
+.menu-details-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(214, 144, 79, 0.6);
+  color: white;
+  border-top: 2px dotted rgb(17, 17, 17);
+   justify-content: center;
+      align-items: center;
+  padding: 10px;
+  height: 193px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.menu-item:hover .menu-details-overlay {
+  opacity: 1;
+  padding: 15px; 
+ width:269px;
+ margin:10px 0px 9px 1px;/* Makes the overlay appear on hover */
+}
+
+.price {
+  font-weight: bold;
+}
+@media (max-width: 480px) {
+  .menu-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 10px; /* Adjust gap between items */
+  }
+
+  .sidebar {
+    margin: 20px 0px 0px 10px; /* Adjust sidebar margins for smaller screens */
+    width: 100%; /* Make sidebar take full width */
+    padding: 10px;
+  }
+
+  .menu-image {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Adjust height proportionally */
+    margin: 0; /* Remove margins for smaller screens */
+  }
+
+  .content {
+    margin: 0; /* Remove extra margins */
+  }
+
+  .heading {
+    font-size: 24px; /* Adjust font size for smaller screens */
+    margin: 20px 0;
+  }
+
+  .description {
+    font-size: 16px;
+    margin: 20px;
+  }
+
+  .menu-details-overlay {
+    width: 100%; /* Ensure overlay spans full width */
+    margin: 0; /* Adjust overlay margins */
+  }
+}
+/* App.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f0f0f0; /* Background color for the whole page */
+}
+
+
+.rot {
+  background-color: #505550; /* Background color inside the content */
+  padding: 70px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 80%; /* You can adjust the width as needed */
+  max-width: 600px; /* Limit the max width */
+  margin-top: 50px;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: #f5f5f5;
+}
+/* Center-align heading and paragraph */
+h2 {
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase; /* Make the heading uppercase */
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Gallery Image Styles */
+.gallery-image {
+  height: 250px; /* Fixed height for consistent size */
+  width: 1300px; /* Ensure the image fits the column width */
+  object-fit: cover; /* Maintain image aspect ratio */
+  border: 2px solid #ddd; /* Default border for images */
+  border-radius: 5px; /* Smooth corners */
+  transition: border-color 0.3s ease, transform 0.2s ease; /* Smooth hover and active effects */
+}
+
+.gallery-image:hover {
+  border: 2px solid orange; /* Thin orange border on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.gallery-image.active {
+  border: 4px solid orange; /* Thick orange border when clicked */
+}
+
+/* Row Spacing */
+.row {
+  margin: 1rem 0; /* Space between rows */
+  justify-content: center; /* Center images horizontally */
+}
